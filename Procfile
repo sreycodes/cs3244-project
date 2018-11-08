@@ -1,1 +1,1 @@
-web: gunicorn {{ webserver }}.wsgi
+web: gunicorn webserver.wsgi
