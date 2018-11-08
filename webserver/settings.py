@@ -102,6 +102,7 @@ WSGI_APPLICATION = 'webserver.wsgi.application'
 
 INSTALLED_APPS = (
     'webserver',
+    'django.contrib.staticfiles',
 )
 
 # A sample logging configuration. The only tangible logging
