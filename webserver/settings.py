@@ -22,7 +22,7 @@ DEBUG = get_environ('DJANGO_DEBUG', True)
 
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Sreyans', 'sreyans@django.com'),
 )
 
 MANAGERS = ADMINS
@@ -31,11 +31,11 @@ MANAGERS = ADMINS
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'Europe/Sofia'
+TIME_ZONE = 'Asia/Singapore'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'bg'
+LANGUAGE_CODE = 'en'
 
 SITE_ID = 1
 
@@ -56,10 +56,9 @@ FORCE_SCRIPT_NAME = get_environ('DJANGO_FORCE_SCRIPT_NAME', None)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_URL = (FORCE_SCRIPT_NAME or '').rstrip('/') + '/static/'
+STATIC_URL = '/static/'
 MEDIA_URL = (FORCE_SCRIPT_NAME or '').rstrip('/') + '/media/'
 MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
-STATIC_ROOT = os.path.join(DATA_DIR, 'static')
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = get_environ('DJANGO_SECRET_KEY', '&amp;5^-g9shvg80@u=ykzvmvkvu%7gltbr(67dyfc0=ys-q=+gap_')
@@ -93,7 +92,6 @@ TEMPLATES = [
 MIDDLEWARE = MIDDLEWARE_CLASSES = (
     'django.middleware.gzip.GZipMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'webserver.middleware.XUACompatibleMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 

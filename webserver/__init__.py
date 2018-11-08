@@ -1,1 +1,0 @@
-from . import templatetags  # NOQA

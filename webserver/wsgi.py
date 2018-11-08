@@ -14,8 +14,12 @@ framework.
 
 """
 import os
+import sys
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "webserver.settings")
+sys.path.append("/Users/ssipani/Documents/python/django-static-webserver/webserver")   
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "webserver.settings") 
+
 
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION

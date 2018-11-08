@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<title>CS3244 Final Project</title>
+
+<!-- Latest compiled and minified Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style>
+body {
+    padding-top: 1em;
+}   
+.container {
+    text-align: center;
+}
+.image, .form {
+    display: inline-block;
+    vertical-align: top;
+}
+</style> 
+<div class="container">
+   <div class="jumbotron">
+        <h1>CS3244 Project</h1>
+        <h3>This website allows you to submit the following details and predict your future earnings and loan repayment rates. The predictions are based on a model trained on the College Scorecard Dataset.</h3>
+    </div>
+    <div class="form">
+        <form method="post">
+            <div class="form-group row">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">State of univeristy</label>
+                </div>
+                <select input type ="text" name = "STABBR" class="custom-select" id="inputGroupSelect01">
+                    <option class="dropdown-item" href=# value="AL">Alabama</option>
+                    <option class="dropdown-item" href=# value="AK">Alaska</option>
+                    <option class="dropdown-item" href=# value="AS">American Samoa</option>
+                    <option class="dropdown-item" href=# value="AZ">Arizona</option>
+                    <option class="dropdown-item" href=# value="AR">Arkansas</option>
+                    <option class="dropdown-item" href=# value="CA">California</option>
+                    <option class="dropdown-item" href=# value="CO">Colorado</option>
+                    <option class="dropdown-item" href=# value="CT">Connecticut</option>
+                    <option class="dropdown-item" href=# value="DE">Delaware</option>
+                    <option class="dropdown-item" href=# value="DC">District Of Columbia</option>
+                    <option class="dropdown-item" href=# value="FL">Florida</option>
+                    <option class="dropdown-item" href=# value="FM">Federated States of Micronesia</option>
+                    <option class="dropdown-item" href=# value="GA">Georgia</option>
+                    <option class="dropdown-item" href=# value="GU">Guam</option>
+                    <option class="dropdown-item" href=# value="HI">Hawaii</option>
+                    <option class="dropdown-item" href=# value="ID">Idaho</option>
+                    <option class="dropdown-item" href=# value="IL">Illinois</option>
+                    <option class="dropdown-item" href=# value="IN">Indiana</option>
+                    <option class="dropdown-item" href=# value="IA">Iowa</option>
+                    <option class="dropdown-item" href=# value="KS">Kansas</option>
+                    <option class="dropdown-item" href=# value="KY">Kentucky</option>
+                    <option class="dropdown-item" href=# value="LA">Louisiana</option>
+                    <option class="dropdown-item" href=# value="ME">Maine</option>
+                    <option class="dropdown-item" href=# value="MD">Maryland</option>
+                    <option class="dropdown-item" href=# value="MA">Massachusetts</option>
+                    <option class="dropdown-item" href=# value="MH">Marshal Islands</option>
+                    <option class="dropdown-item" href=# value="MI">Michigan</option>
+                    <option class="dropdown-item" href=# value="MN">Minnesota</option>
+                    <option class="dropdown-item" href=# value="MS">Mississippi</option>
+                    <option class="dropdown-item" href=# value="MO">Missouri</option>
+                    <option class="dropdown-item" href=# value="MT">Montana</option>
+                    <option class="dropdown-item" href=# value="NE">Nebraska</option>
+                    <option class="dropdown-item" href=# value="NV">Nevada</option>
+                    <option class="dropdown-item" href=# value="NH">New Hampshire</option>
+                    <option class="dropdown-item" href=# value="NJ">New Jersey</option>
+                    <option class="dropdown-item" href=# value="NM">New Mexico</option>
+                    <option class="dropdown-item" href=# value="NY">New York</option>
+                    <option class="dropdown-item" href=# value="NC">North Carolina</option>
+                    <option class="dropdown-item" href=# value="ND">North Dakota</option>
+                    <option class="dropdown-item" href=# value="MP">Northern Mariana Islands</option>
+                    <option class="dropdown-item" href=# value="OH">Ohio</option>
+                    <option class="dropdown-item" href=# value="OK">Oklahoma</option>
+                    <option class="dropdown-item" href=# value="OR">Oregon</option>
+                    <option class="dropdown-item" href=# value="PW">Palau</option>
+                    <option class="dropdown-item" href=# value="PA">Pennsylvania</option>
+                    <option class="dropdown-item" href=# value="PR">Puerto Rico</option>
+                    <option class="dropdown-item" href=# value="RI">Rhode Island</option>
+                    <option class="dropdown-item" href=# value="SC">South Carolina</option>
+                    <option class="dropdown-item" href=# value="SD">South Dakota</option>
+                    <option class="dropdown-item" href=# value="TN">Tennessee</option>
+                    <option class="dropdown-item" href=# value="TX">Texas</option>
+                    <option class="dropdown-item" href=# value="UT">Utah</option>
+                    <option class="dropdown-item" href=# value="VT">Vermont</option>
+                    <option class="dropdown-item" href=# value="VA">Virginia</option>
+                    <option class="dropdown-item" href=# value="VI">Virgin Islands</option>
+                    <option class="dropdown-item" href=# value="WA">Washington</option>
+                    <option class="dropdown-item" href=# value="WV">West Virginia</option>
+                    <option class="dropdown-item" href=# value="WI">Wisconsin</option>
+                    <option class="dropdown-item" href=# value="WY">Wyoming</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect02">Predominant degree in university</label>
+                </div>
+                <select input type ="text" name = "PREDDEG" class="custom-select" id="inputGroupSelect02">
+                    <option class="dropdown-item" href=# value=0>None</option>
+                    <option class="dropdown-item" href=# value=1>Certificate Degree</option>
+                    <option class="dropdown-item" href=# value=2>Associate's Degree</option>
+                    <option class="dropdown-item" href=# value=3>Bachelor's Degree</option>
+                    <option class="dropdown-item" href=# value=4>Graduate Degree</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect03">Type of university</label>
+                </div>
+                <select input type ="text" name = "CONTROL" class="custom-select" id="inputGroupSelect03">
+                    <option class="dropdown-item" href=# value=1>Public</option>
+                    <option class="dropdown-item" href=# value=2>Private non-profit</option>
+                    <option class="dropdown-item" href=# value=3>Private for-profit</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <label class="col-xs-3 col-form-label mr-2">Debt or Loan Amount</label>
+                <div class="col-xs-9">
+                    <input type="number" class="form-control" name="DEBT_MDN" value=0>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-xs-3 col-form-label mr-2">Household income</label>
+                <div class="col-xs-9">
+                    <input type="number" step="0.01" class="form-control" name="MEDIAN_HH_INC" value=0>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-xs-3 col-form-label mr-2">Unemployment Rate</label>
+                <div class="col-xs-9">
+                    <input type="number" step="0.01" class="form-control" name="UNEMP_RATE" value=0>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-xs-3 col-form-label mr-2">Poverty Rate</label>
+                <div class="col-xs-9">
+                    <input type="number" step="0.01" class="form-control" name="POVERTY_RATE" value=0>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect04">Locality of university</label>
+                </div>
+                <select input type ="text" name = "LOCALE" class="custom-select" id="inputGroupSelect04">
+                    <option class = "dropdown-item" href="#" value=11>City: Large (population of 250,000 or more)</option>
+                    <option class = "dropdown-item" href="#" value=12>City: Midsize (population of at least 100,000 but less than 250,000)</option>
+                    <option class = "dropdown-item" href="#" value=13>City: Small (population less than 100,000)</option>
+                    <option class = "dropdown-item" href="#" value=21>Suburb: Large (outside principal city, in urbanized area with population of 250,000 or more)</option>
+                    <option class = "dropdown-item" href="#" value=22>Suburb: Midsize (outside principal city, in urbanized area with population of at least 100,000 but less than 250,000)</option>
+                    <option class = "dropdown-item" href="#" value=23>Suburb: Small (outside principal city, in urbanized area with population less than 100,000)</option>
+                    <option class = "dropdown-item" href="#" value=31>Town: Fringe (in urban cluster up to 10 miles from an urbanized area)</option>
+                    <option class = "dropdown-item" href="#" value=32>Town: Distant (in urban cluster more than 10 miles and up to 35 miles from an urbanized area)</option>
+                    <option class = "dropdown-item" href="#" value=33>Town: Remote (in urban cluster more than 35 miles from an urbanized area)</option>
+                    <option class = "dropdown-item" href="#" value=41>Rural: Fringe (rural territory up to 5 miles from an urbanized area or up to 2.5 miles from an urban cluster)</option>
+                    <option class = "dropdown-item" href="#" value=42>Rural: Distant (rural territory more than 5 miles but up to 25 miles from an urbanized area or more than 2.5 and up to 10 miles from an urban cluster)</option>
+                    <option class = "dropdown-item" href="#" value=43>Rural: Remote (rural territory more than 25 miles from an urbanized area and more than 10 miles from an urban cluster)</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <label class="col-xs-3 col-form-label mr-2">Net price of institution</label>
+                <div class="col-xs-9">
+                    <input type="number" class="form-control" name="NPT4_PUB" value=0>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="offset-xs-3 col-xs-9">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class=image>
+        <img src="https://drive.google.com/uc?export=view&id=1h99GoEqZTOUzpqXQY6lxvk6Otwtiosdt" style="width:600px">
+    </div>
+    <h1 class="display-4">Results</h1>
+    <div id="earnings_chart"></div>
+    <div id="repayments_chart"></div>
+</div>
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<!-- Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    google.charts.setOnLoadCallback(drawChart2);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Year", "Earnings", { role: "style" } ],
+        [6, parseInt({{earning6}}), "#b87333"],
+        [8, {{earning8}}, "silver"],
+        [10, {{earning10}}, "gold"],
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { sourceColumn: 1,
+                         type: "number",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Future Earnings",
+        width: 600,
+        height: 400,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("earnings_chart"));
+      chart.draw(view, options);
+  }
+  function drawChart2() {
+      var data = google.visualization.arrayToDataTable([
+        ["Year", "Repayment Rate", { role: "style" } ],
+        [1, ({{rates1}}), "#b87333"],
+        [3, {{rates3}}, "silver"],
+        [5, {{rates5}}, "gold"],
+        [7, {{rates7}}, "orange"],
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { sourceColumn: 1,
+                         type: "number",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Future Repayment Rates",
+        width: 600,
+        height: 400,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("repayments_chart"));
+      chart.draw(view, options);
+  }
+  </script>
+
+<!-- Initialize Bootstrap functionality -->
+<script>
+// Initialize tooltip component
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+// Initialize popover component
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script>
